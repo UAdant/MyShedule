@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextSubject"
+        android:layout_width="385dp"
+        android:layout_height="58dp"
+        android:hint="Subject"
+        android:minWidth="200dp" /> <!-- Додано android:minWidth -->
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="385dp"
+        android:layout_height="66dp"
+        android:hint="Date"
+        android:minWidth="200dp" /> <!-- Додано android:minWidth -->
+
+    <EditText
+        android:id="@+id/editTextType"
+        android:layout_width="380dp"
+        android:layout_height="69dp"
+        android:hint="Type"
+        android:minWidth="200dp" /> <!-- Додано android:minWidth -->
+
+</LinearLayout>
