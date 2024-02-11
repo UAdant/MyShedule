@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton openActivitySchedules = findViewById(R.id.openAcivitySchedule);
 
-
+//sdfsdf
         openActivitySchedules.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
