@@ -13,7 +13,7 @@ public class ProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
 
-        // Находим кнопку по идентификатору
+        // Находим кнопку по идентификаторуп
         ImageButton backButton = findViewById(R.id.button11);
 
         // Устанавливаем обработчик нажатия на кнопку
