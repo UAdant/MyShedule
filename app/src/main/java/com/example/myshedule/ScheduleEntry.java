@@ -1,7 +1,5 @@
 package com.example.myshedule;
 
-
-
 public class ScheduleEntry {
     private int id;
     private String subject;
@@ -19,6 +17,7 @@ public class ScheduleEntry {
         this.completed = completed;
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }

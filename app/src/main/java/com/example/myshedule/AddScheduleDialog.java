@@ -22,6 +22,7 @@ public class AddScheduleDialog extends AppCompatDialogFragment {
     private EditText editTextSubject;
     private EditText editTextType;
     private EditText editTextDate;
+    private OnAddButtonClickListener addButtonClickListener;
 
     @NonNull
     @Override
@@ -52,8 +53,9 @@ public class AddScheduleDialog extends AppCompatDialogFragment {
                         }
 
                         if (isValidDate(date)) {
-                            ScheduleActivity activity = (ScheduleActivity) getActivity();
-                            activity.applyTexts(subject, type, date);
+                            if (addButtonClickListener != null) {
+                                addButtonClickListener.onAddButtonClick(subject, type, date);
+                            }
 
                             // Закриття клавіатури
                             InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -74,6 +76,14 @@ public class AddScheduleDialog extends AppCompatDialogFragment {
         return builder.create();
     }
 
+    public interface OnAddButtonClickListener {
+        void onAddButtonClick(String subject, String type, String date);
+    }
+
+    public void setOnAddButtonClickListener(OnAddButtonClickListener listener) {
+        this.addButtonClickListener = listener;
+    }
+
     private boolean isValidDate(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
         sdf.setLenient(false);
@@ -84,5 +94,8 @@ public class AddScheduleDialog extends AppCompatDialogFragment {
             return false;
         }
     }
+
+
 }
+
 
