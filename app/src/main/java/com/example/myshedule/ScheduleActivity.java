@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.text.ParseException;
@@ -23,7 +24,7 @@ public class ScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        Button addButton = findViewById(R.id.bthAddEvent);
+        ImageButton addButton = findViewById(R.id.bthAddEvent);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +32,7 @@ public class ScheduleActivity extends AppCompatActivity {
             }
         });
 
-        Button openActivityMenu = findViewById(R.id.openAcivityMenuMain);
+        ImageButton openActivityMenu = findViewById(R.id.openAcivityMenuMain);
 
         openActivityMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,9 @@ public class ScheduleActivity extends AppCompatActivity {
     public void openAddScheduleDialog() {
         AddScheduleDialog addScheduleDialog = new AddScheduleDialog();
         addScheduleDialog.show(getSupportFragmentManager(), "add schedule dialog");
+    }
+
+    public void applyTexts(String subject, String type, String date) {
     }
 
 //    public void applyTexts(String subject, String type, String date) {
