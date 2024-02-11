@@ -47,26 +47,26 @@ public class ScheduleActivity extends AppCompatActivity {
         addScheduleDialog.show(getSupportFragmentManager(), "add schedule dialog");
     }
 
-    public void applyTexts(String subject, String type, String date) {
-        if (isValidDate(date)) {
-            // Додавання даних до бази даних
-            DatabaseHelper dbHelper = new DatabaseHelper(this);
-            ScheduleEntry scheduleEntry = new ScheduleEntry(subject, type, date, false); // Передаємо значення completed як false, оскільки запис ще не виконаний
-            long insertedRowId = dbHelper.addScheduleEntry(scheduleEntry);
-            dbHelper.close(); // Закриття з'єднання з базою даних
-
-            if (insertedRowId != -1) {
-                // Дані успішно збережено
-                Toast.makeText(this, "Дані успішно збережено", Toast.LENGTH_SHORT).show();
-            } else {
-                // Помилка збереження даних
-                Toast.makeText(this, "Помилка збереження даних", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            // Повідомлення про неправильний формат дати
-            Toast.makeText(this, "Неправильний формат дати. Введіть дату у форматі 'dd.mm.yyyy'", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    public void applyTexts(String subject, String type, String date) {
+//        if (isValidDate(date)) {
+//            // Додавання даних до бази даних
+//            DatabaseHelper dbHelper = new DatabaseHelper(this);
+//            ScheduleEntry scheduleEntry = new ScheduleEntry(subject, type, date, false); // Передаємо значення completed як false, оскільки запис ще не виконаний
+////            long insertedRowId = dbHelper.addScheduleEntry(scheduleEntry);
+//            dbHelper.close(); // Закриття з'єднання з базою даних
+//
+//            if (insertedRowId != -1) {
+//                // Дані успішно збережено
+//                Toast.makeText(this, "Дані успішно збережено", Toast.LENGTH_SHORT).show();
+//            } else {
+//                // Помилка збереження даних
+//                Toast.makeText(this, "Помилка збереження даних", Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+//            // Повідомлення про неправильний формат дати
+//            Toast.makeText(this, "Неправильний формат дати. Введіть дату у форматі 'dd.mm.yyyy'", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
     private boolean isValidDate(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
