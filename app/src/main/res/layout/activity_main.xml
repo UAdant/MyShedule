@@ -4,49 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/openAcivitySchedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Schedule"
+        android:layout_width="191dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button"
+        android:contentDescription="Здесь описание кнопки"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.169" >
+    </ImageButton>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+
+    <TextView
+        android:id="@+id/text_openAcivitySchedule"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/jua"
+        android:text="Schedule"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/openAcivitySchedule"
+        app:layout_constraintEnd_toEndOf="@+id/openAcivitySchedule"
+        app:layout_constraintStart_toStartOf="@+id/openAcivitySchedule"
+        app:layout_constraintTop_toTopOf="@+id/openAcivitySchedule"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/openUpcomingExamsActivity"
+        android:layout_width="191dp"
+        android:layout_height="53dp"
+        android:contentDescription="Відкриття форми з екзаменами"
+        android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openAcivitySchedule"
         app:layout_constraintVertical_bias="0.082" />
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/text_openUpcomingExamsActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Exams"
+        android:fontFamily="@font/jua"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/openUpcomingExamsActivity"
+        app:layout_constraintEnd_toEndOf="@+id/openUpcomingExamsActivity"
+        app:layout_constraintStart_toStartOf="@+id/openUpcomingExamsActivity"
+        app:layout_constraintTop_toTopOf="@+id/openUpcomingExamsActivity"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/openProgressActivity"
+        android:layout_width="191dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button"
+        android:contentDescription="Відкриття форми з прогресом"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/openUpcomingExamsActivity"
         app:layout_constraintVertical_bias="0.109" />
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/text_openProgressActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Progress"
+        android:fontFamily="@font/jua"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/openProgressActivity"
+        app:layout_constraintEnd_toEndOf="@+id/openProgressActivity"
+        app:layout_constraintStart_toStartOf="@+id/openProgressActivity"
+        app:layout_constraintTop_toTopOf="@+id/openProgressActivity" />
+
+    <ImageButton
+        android:id="@+id/openGradesActivity"
+        android:layout_width="191dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button"
+        android:text="Grades"
+        android:contentDescription="Відкриття форми з оцінками"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/openProgressActivity"
         app:layout_constraintVertical_bias="0.17" />
+
+    <TextView
+        android:id="@+id/text_openGradesActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grades"
+        android:fontFamily="@font/jua"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/openGradesActivity"
+        app:layout_constraintEnd_toEndOf="@+id/openGradesActivity"
+        app:layout_constraintStart_toStartOf="@+id/openGradesActivity"
+        app:layout_constraintTop_toTopOf="@+id/openGradesActivity" />
+
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="164dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/jua"
+        android:text="@string/app_name"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="102dp"
+        android:layout_height="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
