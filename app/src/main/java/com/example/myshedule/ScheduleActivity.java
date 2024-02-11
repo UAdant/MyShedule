@@ -68,14 +68,14 @@ public class ScheduleActivity extends AppCompatActivity {
 //        }
 //    }
 
-    private boolean isValidDate(String date) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-        sdf.setLenient(false);
-        try {
-            sdf.parse(date);
-            return true;
-        } catch (ParseException e) {
-            return false;
-        }
-    }
+//    private boolean isValidDate(String date) {
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+//        sdf.setLenient(false);
+//        try {
+//            sdf.parse(date);
+//            return true;
+//        } catch (ParseException e) {
+//            return false;
+//        }
+//    }
 }
